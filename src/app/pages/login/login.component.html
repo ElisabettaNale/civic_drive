@@ -1,0 +1,34 @@
+<div class="login-page">
+  <p class="login-benvenuto">Benvenuto!</p>
+  <p class="login-description">
+    Le città sono il cuore delle idee, della cultura e della comunità.<br />
+    Su CivicDrive, puoi contribuire a renderle più vivibili e sostenibili.<br />
+    Unisciti a noi!
+  </p>
+  <div class="login-container">
+    <img src="/assets/img/account.svg" alt="Profilo utente" loading="lazy" />
+    <div class="input-container">
+      <img src="/assets/img/lock.svg" alt="Lock" loading="lazy" />
+      <input
+        type="password"
+        id="bearer-token"
+        name="bearer-token"
+        placeholder="Token"
+        [(ngModel)]="token"
+      />
+    </div>
+    <p class="register-container">
+      Non hai ancora un token di accesso? Registrati ora su
+      <a href="https://gorest.co.in/my-account/access-tokens" target="_blank"
+        >GoRest!</a
+      >
+    </p>
+    <div class="button-container">
+      <button (click)="login()">
+        Accedi
+        <img src="/assets/img/login.svg" alt="Login" loading="lazy" />
+      </button>
+    </div>
+  </div>
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+</div>

@@ -1,0 +1,14 @@
+<div class="search-bar-container">
+    <div class="search-bar">
+        <input id="search-input" 
+            type="search" 
+            [placeholder]="placeholderText" 
+            name="search-input"
+            [(ngModel)]="searchTerm"
+            (keydown)="onKeyDown($event)"
+        >
+        <button class="search-button" (click)="onSearch()">
+            <img src="/assets/img/magnifying_glass.svg" alt="Search" loading="lazy">
+        </button>
+    </div>
+</div>

@@ -1,0 +1,114 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #101728;
+    height: 100vh;
+}
+
+.login-benvenuto {
+    font-size: 36px;
+    margin: 70px 50px 0 50px;
+    color: #ffffff;
+}
+
+.login-description {
+    max-width: 500px;
+    text-align: center;
+    color: #ffffff;
+    margin: 10px 50px 0 50px;
+    font-size: 17px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 350px;
+    margin: auto;
+    background: linear-gradient(90deg, #f83c69, #a13fea);
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-container img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input-container img {
+    height: 30px;
+    width: 30px;
+    border: #ffffff;
+}
+
+.input-container input {
+    width: 240px;
+    border: none;
+    outline: none;
+}
+
+.register-container {
+    width: 290px;
+}
+
+.register-container a {
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: color 0.5s ease-in-out;
+}
+
+.register-container a:hover {
+    color: #ffffff;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 290px;
+}
+
+.button-container button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    width: 150px;
+    border: #ffffff;
+    border-radius: 30px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+
+.button-container button:hover {
+    transform: scale(1.05);
+}
+
+.button-container button img {
+    width: 35px;
+    margin-right: 20px;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }

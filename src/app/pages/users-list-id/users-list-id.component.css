@@ -1,0 +1,16 @@
+.user-name {
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px;
+    color: #101728;
+}
+
+.user-info {
+    font-size: 26px;
+    padding: 5px 20px;
+    color: #101728;
+}
+
+.user-info-last {
+    margin-bottom: 20px;
+}

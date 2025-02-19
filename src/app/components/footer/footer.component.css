@@ -1,0 +1,8 @@
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #101728;
+    color: #ffffff;
+    padding: 20px;
+}

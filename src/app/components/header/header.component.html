@@ -1,0 +1,17 @@
+<header>
+  <div class="header-left-side">
+    <img src="/assets/img/favicon.svg" alt="Puzzle" loading="lazy"/>
+    <p>{{ title }}</p>
+  </div>
+  <div class="header-right-side">
+    <a *ngIf="!isLoginPage" class="users-list-button" routerLink="/users-list">
+      <img src="/assets/img/people.svg" alt="Users" loading="lazy"/>
+    </a>
+    <a *ngIf="!isLoginPage" class="users-posts-button" routerLink="/users-posts">
+      <img src="/assets/img/posts.svg" alt="Posts" loading="lazy"/>
+    </a>
+    <a *ngIf="!isLoginPage" class="exit-button" (click)="onExit()">
+      <img src="/assets/img/exit.svg" alt="Exit" loading="lazy"/>
+    </a>
+  </div>
+</header>

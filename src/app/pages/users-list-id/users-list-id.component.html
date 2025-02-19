@@ -1,0 +1,13 @@
+<div *ngIf="user">
+    <p class="user-name">{{ user.name }}</p>
+    <p class="user-info"><strong>ID: </strong>{{ user.id }}</p>
+    <p class="user-info"><strong>Email: </strong>{{ user.email }}</p>
+    <p class="user-info"><strong>Genere: </strong>{{ user.gender }}</p>
+    <p class="user-info"><strong>Stato: </strong>{{ user.status }}</p>
+    <p class="user-info user-info-last"><strong>N. di posts: </strong>{{ posts.length }}</p>
+</div>
+<div>
+    <div class="posts-container" *ngFor="let post of posts">
+        <app-post [post]="post"></app-post>
+    </div>
+</div>

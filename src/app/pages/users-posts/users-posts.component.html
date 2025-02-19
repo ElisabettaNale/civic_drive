@@ -1,0 +1,56 @@
+<div class="page-title-section">
+    <p>Lista posts</p>
+    <img src="/assets/img/posts_blue.svg" alt="Messages icon" loading="lazy">
+</div>
+
+<div class="search-bar-section">
+    <app-search-bar (search)="onSearch($event)" [placeholderText]="placeholderText"></app-search-bar>
+    <div class="new-post" (click)="addPost()">
+        <img src="/assets/img/add_post.svg" alt="Add new post" loading="lazy">
+    </div>
+</div>
+
+<div>
+    <div class="posts-container" *ngFor="let post of posts">
+        <app-post [post]="post"></app-post>
+    </div>
+</div>
+
+<app-paginator 
+    (currentPageChange)="updateCurrentPage($event)" 
+    (pageSizeChange)="updatePageSize($event)">
+</app-paginator>
+
+<!-- Modal to add user details -->
+<app-form-add-user-details
+    *ngIf="isModalUserDetailsOpen"
+    [modalTitle]="'Inserisci i tuoi dettagli'"
+    [modalDescription]="modalDescription"
+    [showTokenField]="false"
+    (userDetails)="addUserDetails($event)"
+    (cancel)="closeModalUserDetails()"
+>
+</app-form-add-user-details>
+
+<!-- Modal to publish a new post -->
+<div class="modal" *ngIf="isModalPublishPostOpen">
+    <div class="modal-content">
+
+      <h2>Pubblica un nuovo post</h2>
+ 
+      <form (ngSubmit)="publishPost(newPostTitle.value, newPostBody.value)">
+
+        <label for="title">Titolo:</label>
+        <input type="text" id="title" #newPostTitle name="title" required>
+  
+        <label for="body">Contenuto:</label>
+        <textarea id="body" #newPostBody name="body" required></textarea>
+  
+        <div class="modal-content-button-container">
+            <button type="button" (click)="closeModalPublishPost()">Annulla</button>
+            <button type="submit">Pubblica</button>
+        </div>
+
+      </form>
+    </div>
+  </div>

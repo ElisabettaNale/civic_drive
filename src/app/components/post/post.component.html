@@ -1,0 +1,31 @@
+<div class="post-container">
+    <p class="post-title">{{ post.title }}</p>
+    <p class="post-user">{{ userName }}</p> <!-- ({{ post.user_id }}) -->
+    <p class="post-body">{{ post.body }}</p>
+    <div class="add-comment-section">
+        <input class="add-comment" #commentInput type="text" placeholder="Aggiungi un commento...">
+        <button class="add-comment-button" (click)="addComment(post.id, commentInput)">Commenta</button>
+    </div>
+    <div class="comment-container" *ngFor="let comment of post.comments">
+        <p class="comment-container-name">{{ comment.name }}</p>
+        <p class="comment-container-body">{{ comment.body }}</p>
+        <hr *ngIf="post.comments && post.comments.length > 1">
+    </div>
+</div>
+
+<!-- Modal to add user details -->
+<app-form-add-user-details
+    *ngIf="showUserDetailsModal"
+    [modalTitle]="'Inserisci i tuoi dettagli'"
+    [modalDescription]="modalDescription"
+    [showTokenField]="false"
+    (userDetails)="saveUserDetails($event)"
+    (cancel)="closeUserDetailsModal()"
+>
+</app-form-add-user-details>
+
+
+    
+
+
+

@@ -1,0 +1,41 @@
+  <!-- Modale per inserire i dettagli utente -->
+<div class="modal">
+    <div class="modal-content">
+    <h2> {{ modalTitle }} </h2>  <!--; Aggiungi un nuovo utente-->
+    <p [innerHTML]="modalDescription"></p> 
+    <!--<p>
+        Non hai ancora un token di accesso?<br>
+        Registrati ora su
+        <a href="https://gorest.co.in/my-account/access-tokens" target="_blank"
+          >GoRest!</a
+        >
+      </p>
+    -->
+
+    <form>
+
+        <label for="name">Nome:</label>
+        <input type="text" id="name" [(ngModel)]="tempUserName" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="tempUserEmail" name="email" required>
+        
+        <label for="gender">Genere:</label>
+        <div class="gender-options">
+            <input type="radio" id="male" name="gender" value="male" [(ngModel)]="tempUserGender" required>
+            <label for="male">Maschio</label><br>
+            <input type="radio" id="female" name="gender" value="female" [(ngModel)]="tempUserGender" required>
+            <label for="female">Femmina</label><br>
+        </div>
+        
+        <label *ngIf="showTokenField" for="token">Token:</label>
+        <input *ngIf="showTokenField" type="password" id="token" name="token" value="token" [(ngModel)]="tempUserToken" required>
+        
+        <div class="modal-content-button-container">
+            <button type="button" (click)="closeModal()">Annulla</button>
+            <button type="button" (click)="onSubmit()">Salva</button>
+        </div>
+
+      </form>
+
+</div>

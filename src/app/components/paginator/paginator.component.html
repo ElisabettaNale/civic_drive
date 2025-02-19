@@ -1,0 +1,29 @@
+<div class="paginator">
+    <p>Utenti per pagina:</p>
+    <div>
+        <button 
+            *ngFor="let size of pageSizeOptions" 
+            class="items-per-page" 
+            [ngClass]="{'selected': size === pageSize}"
+            (click)="setPageSize(size)">
+            {{ size }}
+        </button>
+    </div>
+    <div class="go-to-page-container">
+        <button class="go-to-page" (click)="goToPreviousPage()">
+            <img 
+                src="../../assets/img/previous_page.svg" 
+                alt="Previous page" 
+                loading="lazy"
+            >
+        </button>
+        <p class="page-number">{{ currentPage }}</p>
+        <button class="go-to-page" (click)="goToNextPage()">
+            <img 
+                src="../../assets/img/next_page.svg" 
+                alt="Next page" 
+                loading="lazy"
+            >
+        </button>
+    </div>
+</div>

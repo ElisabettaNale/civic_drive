@@ -1,0 +1,58 @@
+<div class="page-title-section">
+    <p>Lista utenti</p>
+    <img src="/assets/img/people_blue.svg" alt="Users icon" loading="lazy">
+</div>
+
+<div class="search-bar-section">
+    <app-search-bar (search)="onSearch($event)"></app-search-bar>
+    <div class="new-user" (click)="openModal()">
+        <img src="/assets/img/add_user.svg" alt="Add new user" loading="lazy">
+    </div>
+</div>
+
+<div class="users-list-section">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <button class="user-details" [routerLink]="'/users-list/' + user.id">
+                        <img src="/assets/img/user_details.svg" alt="Go to user details" loading="lazy">
+                    </button>
+                </td>
+                <td>
+                    <button class="delete-user" (click)="deleteUser(user.id)">
+                        <img src="/assets/img/trash_bin.svg" alt="Delete user" loading="lazy">
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-paginator 
+    (currentPageChange)="updateCurrentPage($event)" 
+    (pageSizeChange)="updatePageSize($event)">
+</app-paginator>
+
+
+<!-- Modal to add new user -->
+<app-form-add-user-details
+    *ngIf="isModalOpen"
+    [modalTitle]="'Aggiungi un nuovo utente'"
+    [modalDescription]="modalDescription"
+    [showTokenField]="true"
+    (userDetails)="addUser($event)"
+    (cancel)="closeModal()"
+>
+</app-form-add-user-details>
