@@ -97,6 +97,11 @@
             "scripts": [],
             "codeCoverage": true
           }
+        },
+        "server": {
+          "options": {
+            "prerender": false
+          }
         }
       }
     }

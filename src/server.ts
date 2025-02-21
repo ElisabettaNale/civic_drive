@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static('dist/browser'));
 
 app.use('/users-list/:id', async (req, res) => {
-  const renderMode = 'dynamic';  
+  const renderMode = 'full';  
 
   const requestForNetlify = new Request(req.url, {
     method: req.method,
