@@ -18,7 +18,8 @@ import { FormAddUserDetailsComponent } from '../form-add-user-details/form-add-u
     FormAddUserDetailsComponent
   ],
   templateUrl: './post.component.html',
-  styleUrl: './post.component.css'
+  styleUrl: './post.component.css',
+  standalone: true
 })
 export class PostComponent {
 
@@ -79,7 +80,6 @@ export class PostComponent {
       };
       this.apiService.addComment(newComment).subscribe(
         (response: PostComment) => {
-          console.log('Comment added successfully', response);
           if (!this.post.comments) {
             this.post.comments = [];
           }
@@ -106,14 +106,11 @@ export class PostComponent {
         gender: userData.gender,
         status: 'active'
       };
-      console.log(userDetails);
       this.apiService.addUser(userDetails).subscribe(
         (response: User) => {
-          console.log(response)
           userDetails.id = response.id;
           let userDetailsPlusToken = { ...userDetails, token: token};
           this.storageService.saveToLocalStorage(token, userDetailsPlusToken);
-          console.log(localStorage)
         },
         (error) => {
          console.error('Error adding data to GoRest', error);

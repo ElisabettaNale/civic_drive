@@ -27,7 +27,7 @@ export class LocalStorageService {
     return token.replace(/"/g, '');
   }
 
-  // Remove data from local storage
+  // Remove item from local storage
   removeFromLocalStorage(key: string): void {
     localStorage.removeItem(key);
   }
