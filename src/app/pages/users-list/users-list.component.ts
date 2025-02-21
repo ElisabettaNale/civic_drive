@@ -137,8 +137,8 @@ export class UsersListComponent implements OnInit {
       (response: User) => {
         console.log(response);
         this.storageService.saveToLocalStorage(userData.token, response);
-        this.users.push(response);
         this.closeModal();
+        this.getUsers();
       },
       (error) => {
        console.error('Error adding data to GoRest', error);

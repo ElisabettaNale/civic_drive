@@ -10,6 +10,13 @@
     color: #101728;
 }
 
+.paginator div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .items-per-page {
     margin: 5px;
     color: #101728;

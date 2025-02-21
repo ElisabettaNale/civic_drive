@@ -43,18 +43,18 @@ header {
 }
 
 .users-list-button img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
 }
 
 .users-posts-button img {
-    width: 40px;    
-    height: 40px;
+    width: 35px;    
+    height: 35px;
     margin-left: 20px;
 }
 
 .exit-button img {
-    width: 35px;    
-    height: 35px;
+    width: 30px;    
+    height: 30px;
     margin-left: 20px;
 }
