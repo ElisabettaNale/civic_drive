@@ -44,7 +44,6 @@ app-search-bar {
     margin: 20px;
     overflow-x: auto;  
     -webkit-overflow-scrolling: touch;  
-    width: 100%;
 }
 
 table {
