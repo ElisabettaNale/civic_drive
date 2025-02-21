@@ -1,0 +1,6 @@
+[build]
+  functions = "netlify/functions"
+  publish = "dist/civic-drive/browser"
+
+[[plugins]]
+  package = "@netlify/angular-runtime"
