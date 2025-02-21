@@ -61,6 +61,28 @@ if (isMainModule(import.meta.url)) {
 }
 
 /**
+ * Handling a dynamic route 'users-list/:id' without prerendering
+ **/
+app.use('/users-list/:id', (req, res) => {
+ 
+  const renderMode = 'full'; 
+
+  angularApp
+    .handle(req, { renderMode })  
+    .then((response) => {
+      if (response) {
+        res.send(response);  
+      } else {
+        res.status(404).send('Not found'); 
+      }
+    })
+    .catch((error) => {
+      res.status(500).send('Internal Server Error');  
+    });
+});
+
+/**
  * The request handler used by the Angular CLI (dev-server and during build).
  */
 export const reqHandler = createNodeRequestHandler(app);
+
