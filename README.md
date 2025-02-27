@@ -21,7 +21,7 @@ Questo progetto è un'applicazione sviluppata in Angular che simula un sistema d
 la qualità della vita nei centri urbani.<br>
 
 I cittadini possono registrarsi per condividere idee e segnalazioni tramite post e partecipare attivamente a discussioni visualizzando e 
-commentando le proposte altrui e contribuire sopratutto a:<br>
+commentando le proposte altrui e contribuire soprattutto a:<br>
 
 <ul>
     <li>Proteggere, salvaguardare e valorizzare il patrimonio culturale della città;</li>
