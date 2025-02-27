@@ -4,7 +4,7 @@
 </div>
 
 <div class="search-bar-section">
-    <app-search-bar (search)="onSearch($event)"></app-search-bar>
+    <app-search-bar (search)="onSearch($event)" [placeholderText]="placeholderText"></app-search-bar>
     <div class="new-user" (click)="openModal()">
         <img src="/assets/img/add_user.svg" alt="Add new user" loading="lazy">
     </div>
