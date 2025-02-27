@@ -49,8 +49,8 @@ commentando le proposte altrui e contribuire sopratutto a:<br>
 L’applicazione è organizzata seguendo lo schema Angular 19. Qui di seguito sono illustrate le cartelle principali:
 
 ```text
-📂 **src/app/**
-├── 📁 **components/** (Contiene i componenti riutilizzabili)
+📂 src/app/
+├── 📁 components/ (Contiene i componenti riutilizzabili)
 │   ├── footer (Piè di pagina)
 │   ├── form-add-user-details/ (Form per aggiungere dettagli utente a fine di registrazione)
 |   ├── header (Header della pagina)
@@ -58,18 +58,18 @@ L’applicazione è organizzata seguendo lo schema Angular 19. Qui di seguito so
 │   ├── post/ (Singolo post con commenti)
 │   ├── search-bar/ (Barra di ricerca)
 │   
-├── 📁 **models/** (Definizione delle interfacce degli oggetti)
+├── 📁 models/ (Definizione delle interfacce degli oggetti)
 │   ├── user.model.ts (Modello utente)
 │   ├── post.model.ts (Modello post)
 │   ├── postComment.model.ts (Modello commento)
 │
-├── 📁 **pages/** (Le pagine principali dell'app)
+├── 📁 pages/ (Le pagine principali dell'app)
 │   ├── login/ (Pagina di accesso ocn token)
 │   ├── users-list/ (Pagina iniziale con lista utenti)
 │   ├── users-list-id/ (Pagina dedicata al singolo utente)
 │   ├── users-posts/ (Seconda pagina con lista dei post)
 │   
-├── 📁 **services/** (Contiene i servizi)
+├── 📁 services/ (Contiene i servizi)
 │   ├── go-rest-api.service.ts (Gestisce le chiamate API a GoRest)
 │   ├── local-storage.service.ts (Gestisce il salvataggio dati nel LocalStorage)
 │
