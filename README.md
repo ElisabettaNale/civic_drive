@@ -110,5 +110,5 @@ Se desideri contribuire al progetto, segui questi passaggi:
 <!-- CONTATTI -->
 ## Contatti
 
-Per qualsiasi domanda o suggerimenti, puoi contattarmi tramite il mio **Profilo LinkedIn:** [Elisabetta Nale](https://www.linkedin.com/in/elisabetta-nale/)
-e puoi anche dare un'occhiata al mio **Sito web professionale:** [Home](https://elisabettanale.github.io/index.html).
+Per qualsiasi domanda o suggerimenti, puoi contattarmi tramite il mio **profilo LinkedIn:** [Elisabetta Nale](https://www.linkedin.com/in/elisabetta-nale/)
+e puoi anche dare un'occhiata al mio **sito web professionale:** [Home](https://elisabettanale.github.io/index.html).

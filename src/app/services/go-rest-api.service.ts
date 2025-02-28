@@ -36,7 +36,11 @@ export class GoRestAPIService {
 
   // Gets a specific user by ID
   getUserById(userId: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/users/${userId}`);
+    return this.http.get<any>(`${this.apiUrl}/users/${userId}`, {
+      headers: {
+        'Authorization': `Bearer ${this.storageService.getAuthorizedToken()}`
+      }
+    });
   }
 
   // Gets the details of a user by their ID
